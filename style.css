@@ -370,18 +370,18 @@ button{
 #up{
     background-image: url("./up-arrow.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:contain;
     width: 2em;;
-    height: 4em;;
+    height: auto;;
     padding: 1em;;
 
 }
 #down{
     background-image: url("./down-arrow.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     width: 2em;;
-    height: 4em;;
+    height: auto;;
     padding: 1em;;
 
 }
