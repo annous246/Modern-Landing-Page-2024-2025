@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Landing Page</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="background">
+    </div>
+    <header>
+        <img src="logo.png" id="logo">
+        <nav>
+            <ul>
+                <a><li>PEOPLE</li></a>
+                <a><li>WORK</li></a>
+                <a><li>CLIENTS</li></a>
+                <a><li>CONTACT</li></a>
+            </ul>
+            <button id="menu"></button>
+            <button>ENG</button>
+        </nav>
+    </header>
+    <section id="container">
+
+        
+        <section class="inner"> <div id="upper">
+        <span class="fp">
+        <p>STUDIO</p>
+        <p id="thin">THIRTEEN</p>
+       </span>
+        <span class="fp">
+        <p>VFX PRODUCTION</p>
+       </span>
+    </div>
+    <div id="middle">
+        <div id="text">
+            <h1 id="fparag">Cinematic</h1>
+            <h2 id="sparag">Brilliance</h2>
+        </div>
+        <div id="progress"></div>
+    </div>
+    <div id="lower">
+        <div id="links">
+            <ul>
+            <a><li id="pc"></li></a>
+            <a><li id="yt"></li></a>
+            <a><li id="mic"></li></a>
+            <a><li id="cam"></li></a>
+        </ul>
+        </div>
+        <div id="controls">
+            <button id="up"></button>
+            <span id="display">01</span>
+            <button id="down"></button>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<section class="inner"> <div id="upper">
+    <span class="fp">
+    <p>STUDIO</p>
+    <p id="thin">THIRTEEN</p>
+   </span>
+    <span class="fp">
+    <p>VFX PRODUCTION</p>
+   </span>
+</div>
+<div id="middle">
+    <div id="text">
+        <h1 id="fparag">Cinematic</h1>
+        <h2 id="sparag">Brilliance</h2>
+    </div>
+    <div id="progress"></div>
+</div>
+<div id="lower">
+    <div id="links">
+        <ul>
+        <a><li id="pc"></li></a>
+        <a><li id="yt"></li></a>
+        <a><li id="mic"></li></a>
+        <a><li id="cam"></li></a>
+    </ul>
+    </div>
+    <div id="controls">
+        <button id="up"></button>
+        <span id="display">01</span>
+        <button id="down"></button>
+    </div>
+</div>
+</section>
+
+
+
+
+
+
+
+<section class="inner"> <div id="upper">
+    <span class="fp">
+    <p>STUDIO</p>
+    <p id="thin">THIRTEEN</p>
+   </span>
+    <span class="fp">
+    <p>VFX PRODUCTION</p>
+   </span>
+</div>
+<div id="middle">
+    <div id="text">
+        <h1 id="fparag">Cinematic</h1>
+        <h2 id="sparag">Brilliance</h2>
+    </div>
+    <div id="progress"></div>
+</div>
+<div id="lower">
+    <div id="links">
+        <ul>
+        <a><li id="pc"></li></a>
+        <a><li id="yt"></li></a>
+        <a><li id="mic"></li></a>
+        <a><li id="cam"></li></a>
+    </ul>
+    </div>
+    <div id="controls">
+        <button id="up"></button>
+        <span id="display">01</span>
+        <button id="down"></button>
+    </div>
+</div>
+</section>
+
+
+
+
+
+
+
+   
+</section>
+    
+</body>
+<script>
+    const lista=["Cinema","Engineering","Neat"]
+    const listb=["Brilliance","Beauty","Looks"]
+    let count=0;
+    let upper=document.getElementById('up')
+    let downer=document.getElementById('down')
+    let fp=document.getElementById('fparag')
+    let sp=document.getElementById('sparag')
+    let display=document.getElementById('display')
+    upper.addEventListener('click',(e)=>{
+        upper.disabled=true
+        e.preventDefault();
+        count++;
+        display.textContent="0"+(count+1)
+        fp.className="animate1"
+        sp.className="animate2"
+        setTimeout(()=>{
+            fp.textContent=lista[count%3];},1200)
+        setTimeout(()=>{
+            sp.textContent=listb[count%3];},900)
+        setTimeout(()=>{
+           
+            fp.className=""},2000)
+        setTimeout(()=>{
+          sp.className=""},1500)
+          setTimeout(()=>{
+            upper.disabled=false},2000)
+
+    })
+    downer.addEventListener('click',(e)=>{
+        downer.disabled=true
+        e.preventDefault();
+        count--;
+        if(count<0)count=2;
+        display.textContent="0"+(count+1)
+        fp.className="danimate1"
+        sp.className="danimate2"
+        setTimeout(()=>{
+            fp.textContent=lista[count%3];},1200)
+        setTimeout(()=>{
+            sp.textContent=listb[count%3];},900)
+        setTimeout(()=>{fp.className=""},2000)
+        setTimeout(()=>{
+           sp.className=""},1500)
+          setTimeout(()=>{
+            downer.disabled=false},2000)
+
+    })
+</script>
+</html>
