@@ -160,6 +160,7 @@
     let display=document.getElementById('display')
     upper.addEventListener('click',(e)=>{
         upper.disabled=true
+        downer.disabled=true
         e.preventDefault();
         count++;
         display.textContent="0"+(count+1)
@@ -175,11 +176,13 @@
         setTimeout(()=>{
           sp.className=""},1500)
           setTimeout(()=>{
-            upper.disabled=false},2000)
+            upper.disabled=false
+            downer.disabled=false},2000)
 
     })
     downer.addEventListener('click',(e)=>{
         downer.disabled=true
+        upper.disabled=true
         e.preventDefault();
         count--;
         if(count<0)count=2;
@@ -194,7 +197,8 @@
         setTimeout(()=>{
            sp.className=""},1500)
           setTimeout(()=>{
-            downer.disabled=false},2000)
+            downer.disabled=false
+            upper.disabled=false},2000)
 
     })
 </script>
