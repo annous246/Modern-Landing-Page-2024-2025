@@ -69,7 +69,7 @@ header:hover{
 .inner{
     position: relative;
     width: 100%;
-    padding-top: 12em;
+    padding-top: 6em;
     margin-top: 6em;
     display: flex;
     flex-direction: column;
@@ -444,7 +444,7 @@ button{
 
 @media only screen and (max-width:690px){
     .inner{
-        padding-top:17em ;
+        padding-top:6em ;
     }
     #middle {
         justify-content: center;
@@ -463,7 +463,7 @@ button{
 
 @media only screen and (max-width:500px){
     .inner{
-        padding-top:12em ;
+        padding-top:6em ;
     }
     #middle {
         width: 100%;
@@ -501,7 +501,7 @@ justify-content: center;
         width: 100%;;
     }
     .inner{
-        padding-top: 12em;
+        padding-top: 9em;
     }
      
 }
