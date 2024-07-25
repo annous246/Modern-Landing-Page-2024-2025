@@ -18,9 +18,11 @@
                 <a><li>CLIENTS</li></a>
                 <a><li>CONTACT</li></a>
             </ul>
-            <button id="menu"></button>
-            <button>ENG</button>
         </nav>
+            <div id="menus">
+            <button id="menu" value="false"></button>
+            <button>ENG</button>
+           </div>
     </header>
     <section id="container">
 
@@ -200,6 +202,50 @@
             downer.disabled=false
             upper.disabled=false},2000)
 
+    })
+    let mnbtn=document.getElementById("menu");
+    let navbar=document.querySelector('nav');
+    let logo=document.getElementById('logo');
+    let firstSection=document.getElementsByClassName('inner')[0]
+    mnbtn.addEventListener('click',(e)=>{
+        console.log(mnbtn.value)
+        if(screen.width<810){
+            
+       console.log("booms")
+       if(mnbtn.value=='true'){
+        //close 
+       navbar.style.display="none"
+       logo.style.display="none"
+       firstSection.style.paddingTop="17em"
+       mnbtn.value="false"
+
+
+       }
+       else{
+        //open
+       navbar.style.display="flex"
+       logo.style.display="block"
+       firstSection.style.paddingTop="50em"
+        mnbtn.value="true"
+       }
+        }
+        else{
+       if(mnbtn.value=='true'){
+        //close 
+       navbar.style.display="none"
+       logo.style.display="none"
+       mnbtn.value="false"
+
+
+       }
+       else{
+        //open
+       navbar.style.display="flex"
+       logo.style.display="block"
+        mnbtn.value="true"
+       }
+
+        }
     })
 </script>
 </html>

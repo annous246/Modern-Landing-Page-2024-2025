@@ -69,7 +69,7 @@ header:hover{
 .inner{
     position: relative;
     width: 100%;
-    padding-top: 6em;
+    padding-top: 17em;
     margin-top: 6em;
     display: flex;
     flex-direction: column;
@@ -95,6 +95,20 @@ nav{
     align-items: center;
     text-align: center;
 }
+#menus{
+    justify-self: end;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    
+
+}
+#menus button{
+    margin: 0 2em;
+}
 nav ul{
     display: flex;
     flex-direction: row;
@@ -117,7 +131,6 @@ ul a:hover{
     transition: 0.2s all;
 }
 ul a:last-child{
-    margin-right: 4em;
 }
 .fp{
     display: flex;
@@ -385,3 +398,114 @@ button{
     padding: 1em;;
 
 }
+@media only screen and (max-width:1000px){
+    #menus{
+        flex-direction: column;
+        margin: 0.5em 0;
+    }
+
+}
+@media only screen and (max-width:810px){
+    nav ul{
+        flex-direction: column !important;
+       
+    }
+    header{
+        flex-direction: column;
+        backdrop-filter: blur(5px);
+       
+    }
+    header img{
+        display: none;
+        align-self:center ;
+    }
+    nav{
+        display: none;
+        width: 100%;
+    }
+    nav ul{
+        font-weight: 1000;
+        width: 100%;
+    }
+    nav ul a{
+        
+        filter: blur(0px);
+    }
+    #menus{
+        justify-self: start;
+         width: 100%;
+    }
+    #menus button{
+        margin: 1em;
+    }
+    #middle{
+        background-color: red;
+        margin: 2em;
+    }
+}
+
+@media only screen and (max-width:690px){
+    .inner{
+        padding-top:17em ;
+    }
+    #middle {
+        justify-content: center;
+        font-size: 3em;
+        align-items: center;
+        text-align: center;
+    }
+    #text{
+        
+        justify-content: center;
+      
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width:500px){
+    .inner{
+        padding-top:9em ;
+    }
+    #middle {
+        width: 100%;
+    }
+    #text{
+        width: 100%;
+        
+        justify-content: center;
+      
+        align-items: center;
+        text-align: center;
+    }
+    #lower{
+        flex-direction: column;
+      
+    }
+    #links{
+        
+        width: 100%;;
+    }
+    #controls {
+width: 100%;
+justify-content: center;
+     }
+}
+
+
+@media only screen and (max-width:357px){
+   
+ 
+    #links ul{
+        flex-direction: column;
+      
+        
+        width: 100%;;
+    }
+    .inner{
+        padding-top: 0;
+    }
+     
+}
+
+   
