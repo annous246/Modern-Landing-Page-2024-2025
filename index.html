@@ -206,7 +206,7 @@
     let mnbtn=document.getElementById("menu");
     let navbar=document.querySelector('nav');
     let logo=document.getElementById('logo');
-    let firstSection=document.getElementsByClassName('inner')[0]
+    let sections=document.getElementsByClassName('inner')
     mnbtn.addEventListener('click',(e)=>{
         console.log(mnbtn.value)
         if(screen.width<810){
@@ -216,7 +216,10 @@
         //close 
        navbar.style.display="none"
        logo.style.display="none"
-       firstSection.style.paddingTop="6em"
+       for(let element of sections){
+       element.style.paddingTop="6em"
+
+       }
        mnbtn.value="false"
 
 
@@ -225,7 +228,10 @@
         //open
        navbar.style.display="flex"
        logo.style.display="block"
-       firstSection.style.paddingTop="50em"
+       for(let element of sections){
+       element.style.paddingTop="50em"
+
+       }
         mnbtn.value="true"
        }
         }
